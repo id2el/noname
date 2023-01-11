@@ -1,0 +1,224 @@
+* {
+    -webkit-box-sizing: border-box!important; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box!important;    /* Firefox, other Gecko */
+    box-sizing: border-box!important;         /* Opera/IE 8+ */
+}
+nav {
+    width:1450px;
+    /* nav바 가로길이 */
+    height:60px ;
+    /* nav바 세로길이 */
+    border-bottom:1.5px solid #ffffff ;
+    /* nav바 아래 선 */
+    position: absolute;
+    /* 위치 부모 */
+    margin-top: 50px;
+    left:50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+  }
+nav > li {
+    transition-duration: 0.5s;
+    /* 0.5초 걸리는 트렌지션 */
+}
+nav > ul {
+    font-size: 26px;
+    /* 메인 메뉴 폰트 */
+    padding: 0 60px;
+    /* 메인 메뉴 가로 패딩 */
+    text-align: center;
+    position: relative;
+    /* 위치 자식 */
+    float: left;
+}
+nav > ul > li {
+    /* 메인, 서브 메뉴 통틀어 */
+    width:100%;
+    line-height:60px;
+        -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+    position:relative;
+    /* 위치 자녀 */
+}
+nav > ul > li > ul {
+    /* 서브메뉴 */
+    visibility: hidden;
+    opacity: 0;
+    pointer-events:none;
+        -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    position: relative;
+    font-size:20px;
+    text-align: center;
+    background-color: #5993a649;
+    padding: 5px 20px;
+    
+}
+
+nav>ul>li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+}
+nav > ul > li > ul > li, nav > ul > li > ul> li > a {
+       -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+}
+.main { padding: 20px 45px;}  
+header {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 300px;
+    float: left;
+}
+.wrap {
+    width: 1920px;
+}
+.language_sub {
+    background-color: #5993a649;
+    text-align: center;
+    display: none;
+}
+.language_sub li a {
+    color:#eee;
+    font-weight: bold;
+    text-align: center;
+}
+.left_header {
+    margin-top: 35px;
+    float: left;
+    width: 250px;
+    height: 100px;
+    display: flex;
+}
+.right_header {
+    width: 30px;
+    margin-top: 65px;
+    position: absolute;
+}
+.hamburger {
+    position: relative;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    --swiper-theme-color: #ffffff;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.swiper-pagination {
+    bottom: -50px;
+}
+.swiper-pagination-bullet { width: 12px; height: 12px; background-color: #ffffff; border: 1px solid rgb(255, 255, 255); opacity: 1; }
+
+.up_arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 100;
+}
+.up_arrow img {
+    width: 50%;
+}
+html ::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+.swiper_ {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    --swiper-theme-color: #ffffff;
+}
+.scroll_down {
+    position: fixed;
+    bottom: -50px;
+    left: 50px;
+    z-index: 100;
+    width: 200px;
+    height: 100px;
+}
+.scroll_down img {
+    width: 10%;
+    display: inline-block;
+}
+h2 {
+    display: inline-block;
+}
+.logo_gray {
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+.copyright {
+    color: rgb(255, 255, 255);
+    float: left;
+    margin-left: 50px;
+    width: 100%;
+}
+.copyright .my {
+    font-size: 15px;
+    display: inline-block;
+}
+.privacy {
+    font-size: 15px;
+    float: right;
+    margin-right: 50px;
+    display: block;
+}
+.copyright p {
+    font-size: 20px;
+}
+.bottom {
+    width: 100%;
+}
+footer {
+    margin-top: 100px;
+    margin-bottom: 400px;
+    width: 100%;
+}
+.sns img {
+    width: 40px;
+    margin: 0 5px;
+    position: flex;
+    margin-bottom: 10px;
+}
+.sns div {
+    float: left;
+    margin: 0 10px;
+}
+.sns {
+    height: 40px;
+    width: 200px;
+    float: right;
+}

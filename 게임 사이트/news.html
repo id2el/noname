@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/introduce.css" type="text/css">
+    <script src = "js/jquery-3.6.3.js"></script>
+</head>
+<body>
+    <header>
+        <div class="left_header">
+            <div class="logo">
+                <a href = "index.html">
+                    <img src="/img/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="language">
+                <a href="#">KR <span>▼</span></a>
+                <div class="language_sub">
+                    <ul>
+                        <li><a href="#" class="active">KR</a></li>
+                        <li><a href="#">EN</a></li>
+                    </ul>
+                </div>
+            </div>    
+        </div>  
+        <!-- 메뉴바 -->
+        <nav>
+            <ul>
+                <li>
+                    <a class = "main" href = "introduce.html">게임소개</a>
+                    <ul class = "sub">
+                        <li><a href = "introduce.html">스토리</a></li>
+                        <li><a href = "introduce.html">캐릭터</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class = "main" href = "news.html">소식</a>
+                    <ul class = "sub">
+                        <li><a href = "news.html">업데이트</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class = "main" href = "event.html">이벤트</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class = "main" href = "guide.html">가이드북</a>
+                    <ul class = "sub">
+                        <li><a href = "guide.html">튜토리얼</a></li>
+                        <li><a href = "guide.html">조작법</a></li>
+                        <li><a href = "guide.html">용어</a></li>
+                        <li><a href = "guide.html">성능체크</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class = "main" href = "#">개발진</a>
+                    <ul class = "sub">
+                        <li><a href = "#">개발</a></li>
+                        <li><a href = "#">문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="right_header">
+                <div class="hamburger">
+                    <a href = "#">
+                        <img src="/img/hamburger.png" alt="hamburger_menu">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="page">
+        <h1 class = "introduce">소식</h1>
+        <ul id="tabs">
+            <li><a href="#" title="tab1">업데이트</a></li>
+        </ul>
+        
+        <div id="content"> 
+            <div id="tab1">
+                <img src = "/img/imsi.png" alt = "" >
+                <h2>스토리</h2>
+                <p>이러쿵저러쿵</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <footer>
+        <div class="centerbox">
+            <div class="logo_gray">
+                <a href="#">
+                    <img src = "/img/logo.png" alt = "logo" >
+                </a>
+            </div>
+            <div class="bottom">
+                <div class ="copyright">
+                    전화번호:<br>
+                    개발자 이메일: <br>
+                    <br></p>
+                    <p class="my">COPYRIGHT 2023 YOONYOORIM ALL RIGHTS RESERVED | yyl3524@naver.com</p>
+                </div>
+            </div>
+            <div class="sns">
+                <a href = "#">
+                    <img src = "https://www.instagram.com/tteokleaf/" alt = "insta">
+                    <img src = "/img/youtube.png" alt = "youtube">
+                    <img src = "/img/twitter.png" alt = "twitter">
+                </a>
+        </div>
+    </footer>
+        <div class="up_arrow">
+            <a href="#">
+                <img src="/img/up_arrow.png" alt="up">
+            </a>
+        </div>
+    </div>
+        <script>
+            $(document).ready(function() {
+                $("#content div").hide(); // Initially hide all content
+                $("#tabs li:first").attr("id","current"); // Activate first tab
+                $("#content div:first").fadeIn(); // Show first tab content
+                
+            $('#tabs a').click(function(e) {
+                e.preventDefault();        
+                $("#content div").hide(); //Hide all content
+                $("#tabs li").attr("id",""); //Reset id's
+                $(this).parent().attr("id","current"); // Activate this
+                $('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
+                });
+            })();
+            $('a').click(function(e){
+                e.preventDefault();
+            });
+            $('.hamburger').click(function(){
+                $('.popup').show();
+            });
+            $('.close_btn').click(function(){
+                $('.popup').hide();
+            });
+            $('.up_arrow').click(function(){
+                $('html, body').animate({'scrollTop': 0});
+            });
+            $(document).ready(function(){
+                        // 서브 오르락내리락
+                        var sw = 0
+
+                        $('.language > a').click(function(){
+                            if(sw==0){
+                                sw = 1;
+                                $('.language_sub').show()
+                            } else {
+                                sw = 0;
+                                $('.language_sub').hide()
+                            }
+                        });
+                    });
+        </script>
+    </body>
+</html>
